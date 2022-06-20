@@ -1,0 +1,5 @@
+*.pyc
+emailer/emailAlert.txt
+input_files/emailAlert.txt
+table.html
+table.json

@@ -1,0 +1,11 @@
+# CHROME_PATH_LAPTOP = "../"
+# CHROME_PATH_MINT = "/home/mintberry/Repos/selenium/babyForm/drivers/linux_chrome"
+# MINT = "/usr/local/bin/chromedriver"
+
+SAMS_URL = "https://www.samsclub.com/s/baby%20formula"
+COSTCO_URL = "https://www.costco.com/formula-feeding.html"
+TARGET_URL = "https://www.target.com/s?searchTerm=powder+infant+formula+"
+WALMART_URL = "https://www.walmart.com/browse/feeding/parent-s-choice-baby-formula/5427_133283_9817698"
+AMAZON_URL = "https://www.amazon.com/s?k=Baby+%26+Toddler+Formula&i=baby-products&rh=n%3A16323121%2Cp_89%3AMama+Bear"
+WALGREENS_URL = "https://www.walgreens.com/store/c/productlist/N=374331-2000014765"
+KROGER_URL = "https://www.kroger.com/pl/baby-formula/44008?taxonomyId=44008&brandName=Comforts&fulfillment=all"
