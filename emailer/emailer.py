@@ -25,8 +25,8 @@ class Mail:
         Obtains the email sender's username/password from a text file.
         """
         script_dir = os.path.dirname(__file__) #<-- absolute dir the script is in
-        rel_path = "emailAlert.txt"
-        abs_file_path = os.path.join(script_dir, rel_path)
+        file_name = "emailAlert.txt"
+        abs_file_path = os.path.join(script_dir, "..", "input_files", file_name)
         f = open(abs_file_path, 'r')
         loginCredentials = f.readlines()
         self.sender = (loginCredentials[0]).strip()
@@ -40,8 +40,8 @@ class Mail:
         :return list: list of email recipients
         """
         script_dir = os.path.dirname(__file__) #<-- absolute dir the script is in
-        rel_path = "emailSubscribers.txt"
-        abs_file_path = os.path.join(script_dir, rel_path)
+        file_name = "emailSubscribers.txt"
+        abs_file_path = os.path.join(script_dir, "..", "input_files", file_name)        
         f = open(abs_file_path, 'r')
         subscribers = f.read().splitlines()
         # print(subscribers)
