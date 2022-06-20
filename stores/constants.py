@@ -1,7 +1,3 @@
-# CHROME_PATH_LAPTOP = "../"
-# CHROME_PATH_MINT = "/home/mintberry/Repos/selenium/babyForm/drivers/linux_chrome"
-# MINT = "/usr/local/bin/chromedriver"
-
 SAMS_URL = "https://www.samsclub.com/s/baby%20formula"
 COSTCO_URL = "https://www.costco.com/formula-feeding.html"
 TARGET_URL = "https://www.target.com/s?searchTerm=powder+infant+formula+"
