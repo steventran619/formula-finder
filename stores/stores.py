@@ -10,8 +10,12 @@ from stores.kroger import Kroger
 import stores.constants as const
 import os
 
+STORESPATH = os.path.dirname(__file__)
+RELATIVEPATH = "input_files"
+DRIVERSPATH = os.path.join(STORESPATH, "..", RELATIVEPATH)
+
 class Stores(webdriver.Chrome):
-    def __init__(self, driverPath = const.CHROME_PATH_MINT, teardown = False):
+    def __init__(self, driverPath = DRIVERSPATH, teardown = False):
         self.driver_path = driverPath
         self.teardown = teardown
         os.environ['PATH'] += os.pathsep + self.driver_path
@@ -100,17 +104,17 @@ class Stores(webdriver.Chrome):
             field_names = ['Product', 'Availability', 'Price', 'Store', 'URL']
         )
         # Costco - General
-        costcoQ = self.runCostco()
-        table.add_rows(costcoQ)
+        # costcoQ = self.runCostco()
+        # table.add_rows(costcoQ)
         
         # Target - General
         targetQ = self.runTarget()
         table.add_rows(targetQ)
         
         # Amazon - Mama Bear Brand
-        amazonQ = self.runAmazon()
-        table.add_rows(amazonQ)
-        print("\n>>> Search Complete <<<\n")
+        # amazonQ = self.runAmazon()
+        # table.add_rows(amazonQ)
+
         # Kroger - Comforts Brand - Under construction
         # krogerQ = self.runKroger()
         # table.add_rows(krogerQ)
@@ -120,6 +124,7 @@ class Stores(webdriver.Chrome):
         # self.display_file("table.json")
         # self.display_file("table.html")
         # self.display_results(table)
+        print("\n>>> Search Complete <<<\n")
         return table
     
     def display_results(self, table: PrettyTable):
@@ -149,3 +154,9 @@ class Stores(webdriver.Chrome):
     def get_CSV_table(self, table: PrettyTable):
         """Returns the Pretty Table as a CSV string"""
         return table.get_csv_string()
+
+def main():
+    test = Stores()
+
+if __name__ == "__main__":
+    main()
