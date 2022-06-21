@@ -102,11 +102,11 @@ Formula Finder can run on any OS. It just requires Python and Google Chrome to g
 I wanted to learn a new stack such as Selenium. I will also be creating other web applications in the future. I liked that Selenium has options to perform web based GUI automation and testing.
 
 #### Okay, what about Google Chrome over Firefox and Safari?
-One of the goals was to have it be cross-compatible with operatin systems such as Windows, Mac, and Linux. Firefox also requires additional driver (Gecko Driver) resource that would take an extra step. 
+One of the goals was to have it be cross compatible with operating systems such as Windows, Mac, and Linux. Firefox also requires additional driver (Gecko Driver) resource that would take an extra step. 
 
 #### Why are you using AOL Email?
 
-As of June 2022, G-Mail removed the "less secure" mail settings now making python's SMTPLIB incompatible (or more challenging). Went with AOL for the nostalgia and wide range of available email addresses.
+As of June 2022, Gmail removed the "less secure" mail settings now making python's SMTPLIB incompatible (or more challenging). Went with AOL for the nostalgia and wide range of available email addresses.
 
 #### Will you be re-working Kroger, Walmart, and Sams Club?
 
