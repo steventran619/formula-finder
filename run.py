@@ -19,11 +19,11 @@ def main():
             htmlResults = bot.get_HTML_table(results)
 
             # Initialize E-Mailer
-            # mail = Mail()
-            # mail.getSender()
-            # mail.sendMessage(mail.generateMessage(currentTime, htmlResults))
+            mail = Mail()
+            mail.getSender()
+            mail.sendMessage(mail.generateMessage(currentTime, htmlResults))
             wait = input('\nEnter any key to exit\n')
-            print("Thank you for using my Formula Finder.\n Now exiting...")
+            print("Thank you for using my Formula Finder.\nNow exiting...")
             bot.close()
     except Exception as errors:
         if 'in PATH' in str(errors):
