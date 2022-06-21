@@ -4,7 +4,7 @@ from selenium.webdriver.common.by import By
 from selenium.webdriver.remote.webelement import WebElement
 from selenium.webdriver.support.ui import Select
 from selenium.webdriver.support import expected_conditions as EC
-from selenium.common.exceptions import StaleElementReferenceException, NoSuchElementException
+from selenium.common.exceptions import NoSuchElementException, InvalidSelectorException
 from selenium.webdriver.common.keys import Keys
 import time
 
@@ -23,6 +23,8 @@ class Amazon():
         """
         Finds all the products from the first page of Amazon search.
         """
+        # WebDriverWait(self.driver, 10).until(EC.presence_of_all_elements_located()
+        # self.driver.implicitly_wait(9)
         search_box = self.driver.find_element(By.CLASS_NAME,
             's-main-slot')
         self.product_boxes = search_box.find_elements(By.CSS_SELECTOR, 'div[class="sg-col-4-of-12 s-result-item s-asin sg-col-4-of-16 sg-col s-widget-spacing-small sg-col-4-of-20"]')
@@ -40,18 +42,23 @@ class Amazon():
         Obtains product names, availiability, pricing, and the URL and stores
         them as products.
         """
+        # self.driver.implicitly_wait(5)
         mamaBear_products = self.filter_mamabear()       
         print(f"> Analyzing {len(mamaBear_products)} Products")
         for each_box in mamaBear_products:
             product_name = each_box.find_element(By.CSS_SELECTOR, 'span[class="a-size-base-plus a-color-base a-text-normal"]').get_attribute('innerHTML')      # WORKING DONT DELETE
             product_available = each_box.find_element(By.CSS_SELECTOR, 'span[class="a-size-small"]').get_attribute('innerHTML')
-            if product_available == 'Out of Stock':                
+            if product_available == 'Out of Stock' or product_available == 'Currently unavailable.':                
                 stock = "Out of Stock"
             else:
                 stock = "In Stock"
             product_url = each_box.find_element(By.TAG_NAME, 'a').get_attribute('href')
-            price = each_box.find_element(By.CSS_SELECTOR, 'span[class="a-offscreen"]').get_attribute('innerHTML')
-            # price = price[0]
+            try:
+                # price = each_box.find_element(By.CSS_SELECTOR, 'span[class="a-offscreen"]').get_attribute('innerHTML')
+                price = each_box.find_element(By.CSS_SELECTOR, 'span[class="a-offscreen"]').get_attribute('innerHTML').strip()
+            except NoSuchElementException or InvalidSelectorException:
+                price = "N/A"
+            # print(price)
             store = __class__.__name__
             self.products.append([
                 product_name,
@@ -59,7 +66,7 @@ class Amazon():
                 price,
                 store,
                 product_url
-                ])
+                ])  
         print('> Completed Amazon Search')
     
     def get_product_summary(self):
