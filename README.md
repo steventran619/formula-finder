@@ -31,7 +31,7 @@
 Purpose of this project is to help new parents find baby formula during the 2022 Baby Formula Shortage. This application scrapes several online retailers for their baby formula inventory, and sends a report to a list of email subscribers. This project has benefitted me personally and a few other moms in our circle in finding formula. The focus is primarily on [Store Brand Formula](https://www.storebrandformula.com/).
 <div align="center">
   <a href="https://github.com/ChocolateTaco/formula-finder">
-    <img src="https://github.com/ChocolateTaco/formula-finder/blob/main/media/formula_shortage.gif" alt="Logo" width="300">
+    <img src="https://github.com/ChocolateTaco/formula-finder/blob/main/media/formula_shortage.gif" alt="Images of low stock of baby formula in stores" width="300">
   </a>
  </div>
 
@@ -58,13 +58,13 @@ Purpose of this project is to help new parents find baby formula during the 2022
 4. [Sign up for an AOL Email Address](https://mail.aol.com) (haha yes they still exist)
 5. In AOL Account Security settings, "Generate app password" or One Time Password (OTP)
 6. In /input_files/ directory, create "emailAlert.txt"
-7. In "emailAlert.txt" add the AOL email address and the one time password (separated by a line space). Note NOT the email address' password, but the One Time Password
-   ```
+7. In "emailAlert.txt" add the AOL email address and the one time password (separated by a line break). *NOT the password of the account, but the One Time Password*
+   ```bash
    emailAddress@aol.com
    emailsOneTimePassword
    ```
 8.  In /input_files/emailSubscribers.txt, update the list of email recipients
-9.  In the installation directory, run the run.py filet
+9.  In the installation directory, run the run.py file
    ```sh
    python3 run.py
    ```   
