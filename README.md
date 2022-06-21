@@ -80,7 +80,7 @@ Formula Finder can run on any OS. It just requires Python and Google Chrome to g
 
 - [x] Scrape StoreBrand Formula Online Retailers
     - [x] Costco.com
-      - [ ] Optimize Costco speed
+      - [ ] Optimize search speed
     - [x] Target.com
     - [x] Amazon.com
     - 🛑 Kroger.com (Anti-Robot Friendly)
