@@ -46,6 +46,7 @@ Purpose of this project is to help new parents find baby formula during the 2022
 Formula Finder can run on any OS. It just requires Python and Google Chrome to get it up and running. Formula Finder scrapes the web using Selenium, for product inventory information. Afterwards it generates an HTML report using PrettyTables. Then Formula Finder logs into an AOL email account, and sends the report out via BCC to a list of email subscribers or recipients.
 
 ### Prerequisites
+* [Python](https://www.python.org/)
 * [Google Chrome Browser](https://www.google.com/chrome/)
 * [Chrome Driver](https://chromedriver.chromium.org/downloads/)
 
