@@ -20,7 +20,6 @@
   </a>
 
 <h3 align="center">Formula Finder</h3>
-
   <p align="center">
     Find availability of baby formula online without any hassle!
   </p>
@@ -98,7 +97,6 @@ Formula Finder can run on any OS. It just requires Python and Google Chrome to g
 
 ## Design FAQs
 
-
 #### Why Selenium over BeautifulSoup or Scrapy?
 
 I wanted to learn a new stack such as Selenium. I will also be creating other web applications in the future. I liked that Selenium has options to perform web based GUI automation and testing.
@@ -108,7 +106,7 @@ One of the goals was to have it be cross-compatible with operatin systems such a
 
 #### Why are you using AOL Email?
 
-As of June 2022, G-Mail removed the "less secure" mail settings now making python's SMTLIB incompatible (or more challenging). Went with AOL for the nostalgia and wide range of available email addresses.
+As of June 2022, G-Mail removed the "less secure" mail settings now making python's SMTPLIB incompatible (or more challenging). Went with AOL for the nostalgia and wide range of available email addresses.
 
 #### Will you be re-working Kroger, Walmart, and Sams Club?
 
