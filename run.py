@@ -8,7 +8,7 @@ def main():
             print('''   _       .,             
     `\.____|_\    Formula Finder
       \______/       June 2022
-       (_)(_)    by Steven Tran''')
+       (_)(_)     by Steven Tran''')
             print("=================================")
             print(">>>  Formula Check Initiated  <<<")
             print("=================================")
