@@ -104,16 +104,16 @@ class Stores(webdriver.Chrome):
             field_names = ['Product', 'Availability', 'Price', 'Store', 'URL']
         )
         # Costco - General
-        # costcoQ = self.runCostco()
-        # table.add_rows(costcoQ)
+        costcoQ = self.runCostco()
+        table.add_rows(costcoQ)
         
         # Target - General
         targetQ = self.runTarget()
         table.add_rows(targetQ)
         
         # Amazon - Mama Bear Brand
-        # amazonQ = self.runAmazon()
-        # table.add_rows(amazonQ)
+        amazonQ = self.runAmazon()
+        table.add_rows(amazonQ)
 
         # Kroger - Comforts Brand - Under construction
         # krogerQ = self.runKroger()
