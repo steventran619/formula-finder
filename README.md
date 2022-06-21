@@ -54,7 +54,7 @@ Purpose of this project is to help new parents find baby formula during the 2022
    ```sh
    pip install -r requirements.txt
    ```
-3. Add the applicable [chrome driver](https://chromedriver.chromium.org/downloads/) to the /input_files/ directory, relevant to your version of Google Chrome
+3. Replace the applicable [chrome driver](https://chromedriver.chromium.org/downloads/) in the /input_files/ directory, relevant to your version of Google Chrome
 4. [Sign up for an AOL Email Address](https://mail.aol.com) (haha yes they still exist)
 5. In AOL Account Security settings, "Generate app password" or One Time Password (OTP)
 6. In /input_files/ directory, create "emailAlert.txt"
