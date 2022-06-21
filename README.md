@@ -16,11 +16,11 @@
 <!-- PROJECT LOGO -->
 <br />
 <div align="center">
-  <a href="https://github.com/github_username/repo_name">
-    <img src="images/logo.png" alt="Logo" width="80" height="80">
+  <a href="https://github.com/ChocolateTaco/formula-finder">
+    <img src="media/bottle_search_icon.png" alt="Logo" width="120">
   </a>
 
-<h3 align="center">Formula Finder 2022</h3>
+<h3 align="center">Formula Finder</h3>
 
   <p align="center">
     Find availability of baby formula online without any hassle!
@@ -29,29 +29,24 @@
 
 <!-- ABOUT THE PROJECT -->
 ## About The Project
-
-[![Product Name Screen Shot][product-screenshot]]([https://example.com](https://conservativeresearchgroup.com/wp-content/uploads/2022/06/Baby-Formula-Shortage-copy-768x424.jpg))
-
 Purpose of this project is to help new and existing parents find Baby formula during the 2022 Baby Formula Shortage in the United States. It scrapes a few major online retailers for their baby formula inventory, and sends the report to a list of email subscribers. This project has benefitted me personally and a few other moms in our circle in keeping track of which formulas go in and out. The focus is primarily on [Store Brand Formula](https://www.storebrandformula.com/) for cost savings. However other formula may also be prevalent in the web scraping.
-
+<div align="center">
+  <a href="https://github.com/ChocolateTaco/formula-finder">
+    <img src="https://github.com/ChocolateTaco/formula-finder/blob/main/media/formula_shortage.gif" alt="Logo" width="300">
+  </a>
+ </div>
 
 ### Built With
 
 * [Selenium](https://www.selenium.dev/)
 * [Python](https://www.python.org/)
 
-<!-- GETTING STARTED -->
-## Getting Started
-
 <!-- This is an example of how you may give instructions on setting up your project locally.
 To get a local copy up and running follow these simple example steps. -->
 
 ### Prerequisites
-* [Chrome Browser](https://www.google.com/chrome/)
+* [Google Chrome Browser](https://www.google.com/chrome/)
 * [Chrome Driver](https://chromedriver.chromium.org/downloads/)
-* [Python 3+](https//www.python.org/)
-* [Selenium](https://www.selenium.dev/)
-
 
 ### Installation
 
@@ -59,14 +54,15 @@ To get a local copy up and running follow these simple example steps. -->
    ```sh
    git clone https://github.com/ChocolateTaco/formula-finder.git
    ```
-2. Install Selenium
+2. Install the requirements.txt
    ```sh
-   pip install -U selenium
+   pip install -r requirements.txt
    ```
-3. [Sign up for an AOL Email Address](https://mail.aol.com)
-4. In AOL Account Security settings, "Generate app password"
-5. In /emailer directory, create "emailAlert.txt"
-6. In "emailAlert.txt" add the AOL email address and the one time password (separated by a line space). Note NOT the email address' password, but the One Time Password
+3. Add the applicable [chrome driver](https://chromedriver.chromium.org/downloads/) to the /input_files/ directory, relevant to your version of Google Chrome
+4. [Sign up for an AOL Email Address](https://mail.aol.com)
+5. In AOL Account Security settings, "Generate app password"
+6. In /emailer directory, create "emailAlert.txt"
+7. In "emailAlert.txt" add the AOL email address and the one time password (separated by a line space). Note NOT the email address' password, but the One Time Password
    ```js
    emailAddress@aol.com
    emailsOneTimePassword
@@ -95,7 +91,8 @@ To get a local copy up and running follow these simple example steps. -->
 - [ ] Email Results to list of email subscribers
     - [x] BCC emails to an email list using AOL SMTP 
     - [ ] Unsubscribe Feature
-- [ ] Create Virtual Environment
+- [x] Create Virtual Environment
+- [ ] Add Scheduling
 
 
 <!-- ACKNOWLEDGMENTS -->
