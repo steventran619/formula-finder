@@ -20,7 +20,6 @@
   </a>
 
 <h3 align="center">Formula Finder</h3>
-
   <p align="center">
     Find availability of baby formula online without any hassle!
   </p>
@@ -35,12 +34,19 @@ Purpose of this project is to help new parents find baby formula during the 2022
   </a>
  </div>
 
-### Built With
+<!-- ### Built With
 
 * [Selenium](https://www.selenium.dev/)
-* [Python](https://www.python.org/)
+* [Python](https://www.python.org/) -->
+
+### How it Works
+<div align="center">
+  <img src="https://github.com/ChocolateTaco/formula-finder/blob/main/media/ff_flow.png" alt="Flow Diagram of How Formula Finder Works" height="325">
+</div>
+Formula Finder can run on any OS. It just requires Python and Google Chrome to get it up and running. Formula Finder scrapes the web using Selenium, for product inventory information. Afterwards it generates an HTML report using PrettyTables. Then Formula Finder logs into an AOL email account, and sends the report out via BCC to a list of email subscribers or recipients.
 
 ### Prerequisites
+* [Python](https://www.python.org/)
 * [Google Chrome Browser](https://www.google.com/chrome/)
 * [Chrome Driver](https://chromedriver.chromium.org/downloads/)
 
@@ -74,7 +80,7 @@ Purpose of this project is to help new parents find baby formula during the 2022
 
 - [x] Scrape StoreBrand Formula Online Retailers
     - [x] Costco.com
-      - [ ] Optimize Costco speed
+      - [ ] Optimize search speed
     - [x] Target.com
     - [x] Amazon.com
     - 🛑 Kroger.com (Anti-Robot Friendly)
@@ -90,10 +96,28 @@ Purpose of this project is to help new parents find baby formula during the 2022
 - [x] Create Virtual Environment
 - [ ] Automatic Scheduling 
 
+## Design FAQs
+
+#### Why Selenium over BeautifulSoup or Scrapy?
+
+I wanted to learn a new stack such as Selenium. I will also be creating other web applications in the future. I liked that Selenium has options to perform web based GUI automation and testing.
+
+#### Okay, what about Google Chrome over Firefox and Safari?
+One of the goals was to have it be cross compatible with operating systems such as Windows, Mac, and Linux. Firefox also requires additional driver (Gecko Driver) resource that would take an extra step. 
+
+#### Why are you using AOL Email?
+
+As of June 2022, Gmail removed the "less secure" mail settings now making python's SMTPLIB incompatible (or more challenging). Went with AOL for the nostalgia and wide range of available email addresses.
+
+#### Will you be re-working Kroger, Walmart, and Sams Club?
+
+Maybe. For the time being those domains have strong capchas and bot protection, making it more challenging for projects like Formula Finder to scrape.
+
+
 <!-- ACKNOWLEDGMENTS -->
 ## Acknowledgments
 
-* [JimSC for the Selenium lessons!](https://github.com/jimdevops19)
+* [JimSC](https://github.com/jimdevops19) for the amazing Selenium lessons!
 
 
 <!-- MARKDOWN LINKS & IMAGES -->
