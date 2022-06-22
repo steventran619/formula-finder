@@ -44,7 +44,6 @@ class Amazon():
         search_box = self.driver.find_element(By.CLASS_NAME,
             's-main-slot')
         self.product_boxes = search_box.find_elements(By.CSS_SELECTOR, 'div[class="sg-col-4-of-12 s-result-item s-asin sg-col-4-of-16 sg-col s-widget-spacing-small sg-col-4-of-20"]')
-        print(len(self.product_boxes))
 
     def filter_mamabear(self):
         """Filters for mama bear brand infant formula."""
