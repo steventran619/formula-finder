@@ -40,10 +40,10 @@ Purpose of this project is to help new parents find baby formula during the 2022
 * [Python](https://www.python.org/) -->
 
 ### How it Works
+Formula Finder can run on any OS. It just requires Python and Google Chrome to get it up and running. Formula Finder scrapes the web using Selenium, for product inventory information. Afterwards it generates an HTML report using PrettyTables. Then Formula Finder logs into an AOL email account, and sends the report out via BCC to a list of email subscribers or recipients.
 <div align="center">
   <img src="https://github.com/ChocolateTaco/formula-finder/blob/main/media/ff_flow.png" alt="Flow Diagram of How Formula Finder Works" height="325">
 </div>
-Formula Finder can run on any OS. It just requires Python and Google Chrome to get it up and running. Formula Finder scrapes the web using Selenium, for product inventory information. Afterwards it generates an HTML report using PrettyTables. Then Formula Finder logs into an AOL email account, and sends the report out via BCC to a list of email subscribers or recipients.
 
 ### Prerequisites
 * [Python](https://www.python.org/)
@@ -105,12 +105,10 @@ I wanted to learn a new stack such as Selenium. I will also be creating other we
 #### Okay, what about Google Chrome over Firefox and Safari?
 One of the goals was to have it be cross compatible with operating systems such as Windows, Mac, and Linux. Firefox also requires additional driver (Gecko Driver) resource that would take an extra step. 
 
-#### Why are you using AOL Email?
+#### It's 2022, why are you still using AOL?
+Went with AOL for the nostalgia and wide range of available email addresses. Also as of May 30, 2022, Gmail removed the "less secure" mail settings now making python's SMTPLIB incompatible. Though I believe you can still use Gmail if you sign up for an App password.
 
-As of June 2022, Gmail removed the "less secure" mail settings now making python's SMTPLIB incompatible (or more challenging). Went with AOL for the nostalgia and wide range of available email addresses.
-
-#### Will you be re-working Kroger, Walmart, and Sams Club?
-
+#### Will you be re-working Kroger, Sams Club, and Walmart ?
 Maybe. For the time being those domains have strong capchas and bot protection, making it more challenging for projects like Formula Finder to scrape.
 
 
