@@ -18,7 +18,23 @@ class Amazon():
         self.products = []     # WebElements
         print("\nNow checking Amazon")
 
+    def searchBar(self, search_word: str):
+        """
+        Searches for the product in the Amazon Search Bar.
+        """
+        search_bar = self.driver.find_element(By.ID, "twotabsearchtextbox")
+        search_bar.click()
+        search_bar.send_keys(search_word)
+        search_bar.send_keys(Keys.ENTER)
 
+    def filterForPowder(self):
+        """Optional left panel filter for Powder Baby Formula"""
+        departments = self.driver.find_element(By.ID, "departments")
+        options = departments.find_elements(By.TAG_NAME, "li")
+        for option in options:
+            if option.find_element(By.CSS_SELECTOR, 'span[class="a-size-base a-color-base"]').get_attribute('innerHTML') == 'Powder Baby Formula':
+                powder_filter = option.click()
+    
     def find_products(self):
         """
         Finds all the products from the first page of Amazon search.
@@ -28,6 +44,7 @@ class Amazon():
         search_box = self.driver.find_element(By.CLASS_NAME,
             's-main-slot')
         self.product_boxes = search_box.find_elements(By.CSS_SELECTOR, 'div[class="sg-col-4-of-12 s-result-item s-asin sg-col-4-of-16 sg-col s-widget-spacing-small sg-col-4-of-20"]')
+        print(len(self.product_boxes))
 
     def filter_mamabear(self):
         """Filters for mama bear brand infant formula."""

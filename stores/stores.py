@@ -79,6 +79,7 @@ class Stores(webdriver.Chrome):
         """
         self.get(const.AMAZON_URL)
         amzn = Amazon(driver = self)
+        amzn.searchBar('mama bear infant formula')
         amzn.find_products()
         amzn.pull_product_attributes()
         return amzn.get_product_summary()
@@ -104,12 +105,12 @@ class Stores(webdriver.Chrome):
             field_names = ['Product', 'Availability', 'Price', 'Store', 'URL']
         )
         # Costco - General
-        costcoQ = self.runCostco()
-        table.add_rows(costcoQ)
+        # costcoQ = self.runCostco()
+        # table.add_rows(costcoQ)
         
         # Target - General
-        targetQ = self.runTarget()
-        table.add_rows(targetQ)
+        # targetQ = self.runTarget()
+        # table.add_rows(targetQ)
         
         # Amazon - Mama Bear Brand
         amazonQ = self.runAmazon()
