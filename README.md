@@ -47,7 +47,7 @@ Formula Finder can run on any OS. It just requires Python and Google Chrome to g
 
 ### Prerequisites
 * [Python](https://www.python.org/)
-* [Google Chrome Browser](https://www.google.com/chrome/)
+* [Google Chrome](https://www.google.com/chrome/)
 * [Chrome Driver](https://chromedriver.chromium.org/downloads/)
 
 ### Installation
@@ -61,7 +61,7 @@ Formula Finder can run on any OS. It just requires Python and Google Chrome to g
    pip install -r requirements.txt
    ```
 3. Replace the applicable [chrome driver](https://chromedriver.chromium.org/downloads/) in the /input_files/ directory, relevant to your version of Google Chrome
-4. [Sign up for an AOL Email Address](https://mail.aol.com) (haha yes they still exist)
+4. [Sign up for an AOL Email Address](https://mail.aol.com)
 5. In AOL Account Security settings, "Generate app password" or One Time Password (OTP)
 6. In /input_files/ directory, create "emailAlert.txt"
 7. In "emailAlert.txt" add the AOL email address and the one time password (separated by a line break). *NOT the password of the account, but the One Time Password*
