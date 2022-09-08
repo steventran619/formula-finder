@@ -27,7 +27,7 @@
 
 <!-- ABOUT THE PROJECT -->
 ## About The Project
-Purpose of this project is to help new parents find baby formula during the 2022 Baby Formula Shortage. This application scrapes several online retailers for their baby formula inventory, and sends a report to a list of email subscribers. This project has benefitted me personally and a few other moms in our circle in finding formula. The focus is primarily on [Store Brand Formula](https://www.storebrandformula.com/).
+Purpose of this project is to help new parents find baby formula during the 2022 Baby Formula Shortage. This application scrapes several online retailers for their baby formula inventory, and sends a report to a list of email subscribers. This project has benefited me personally and a few other moms in our circle in finding formula. The focus is primarily on [Store Brand Formula](https://www.storebrandformula.com/).
 <div align="center">
   <a href="https://github.com/ChocolateTaco/formula-finder">
     <img src="https://github.com/ChocolateTaco/formula-finder/blob/main/media/formula_shortage.gif" alt="Images of low stock of baby formula in stores" width="300">
